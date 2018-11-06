@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://sdm.irancell.ir:14002/appservice/appdownloadpath/Huawei_SDM_2.ipa</string>
+					<string>https://raw.githubusercontent.com/WeberWei1983/iOSS-1/master/Huawei_SDM_2.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>display-image</string>
 					<key>url</key>
-					<string>https://sdm.irancell.ir:14002/appservice/appdownloadpath/icon/SDM.PNG</string>
+					<string>https://raw.githubusercontent.com/WeberWei1983/iOSS-1/master/SDM.PNG</string>
 				</dict>
 				<dict>
 					<key>kind</key>
 					<string>full-size-image</string>
 					<key>url</key>
-					<string>hhttps://sdm.irancell.ir:14002/appservice/appdownloadpath/icon/SDM.PNG</string>
+					<string>https://raw.githubusercontent.com/WeberWei1983/iOSS-1/master/SDM.PNG</string>
 				</dict>
 			</array>
 			<key>metadata</key>
