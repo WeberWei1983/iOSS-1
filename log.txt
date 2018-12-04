@@ -1,0 +1,600 @@
+_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=3}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=RejectReason, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_reject, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Reject Reason, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Reject, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Reject Reason, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=RejectReason, cf_modelitemlength=507, cf_modelitemid=RejectReason, cf_widgetid=cf_textarea, name=Reject Reason, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Reject Reason}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=4}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [End getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46e9bb91] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1b125460] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,i.model_item_id,i.model_item_name,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, CF_BIZ_MODEL_ITEM i where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and f.form_id=i.model_id and p.proc_def_id = ? and f.form_id = ? and a.act_def_id = ? order by p.proc_def_id,f.form_id 
+==> Parameters: SSA(String), CF_SSA_Confirm(String), ConfirmSSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, MODEL_ITEM_ID, MODEL_ITEM_NAME, IS_START
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, MAIN_TBL_PK, ??, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, OperationMode, OperationMode, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, RejectReason, Reject Reason, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, Description, Description, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, SSACode, SSA Code, 0
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@46e9bb91]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@696a79e1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@5ccd749b] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Handle(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@696a79e1]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Desciption, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=TakePicture, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Take Picture, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Take Picture, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_photo, class=cfFileInfo, cf_datatype=CLOB, type=text, cf_elementtype=field, id=TakePicture, cf_number=20, cf_size=5, cf_modelitemid=TakePicture, name=Take Picture, value=, cf_iscreateid=1, cf_format=.*, readonly=readonly, cf_modelitemname=Take Picture}], MODEL_ITEM_TYPE=cf_photo, MODEL_ITEM_ORDER=1}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [End getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316d05d6] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2595439] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,i.model_item_id,i.model_item_name,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, CF_BIZ_MODEL_ITEM i where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and f.form_id=i.model_id and p.proc_def_id = ? and f.form_id = ? and a.act_def_id = ? order by p.proc_def_id,f.form_id 
+==> Parameters: SSA(String), CF_SSA_Handle(String), HandleSSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, MODEL_ITEM_ID, MODEL_ITEM_NAME, IS_START
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Attachment, Attachment, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, MAIN_TBL_PK, ??, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Description, Description, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, TakePicture, Take Picture, 0
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@316d05d6]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34ff827] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1d8afcf5] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Create(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@34ff827]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Title, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Title, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Title, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Title, cf_modelitemlength=107, cf_modelitemid=Title, cf_widgetid=cf_text, name=Title, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=Title}], MODEL_ITEM_TYPE=cf_text, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Category, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=SOAC;PAC;, MODEL_ITEM_OPTION_VALUES=SOAC;PAC;, MODEL_ITEM_NAME=Category, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Category, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=SOAC, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Category, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Category, name=Category, value=SOAC, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Category}, {cf_widgettype=cfRadio, id=Category, cf_modelitemlength=107, cf_modelitemid=Category, cf_widgetid=cf_radio, name=Category, value=PAC, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Category}], MODEL_ITEM_TYPE=cf_radio, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Type, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=Site;Link;, MODEL_ITEM_OPTION_VALUES=Site;Link;, MODEL_ITEM_NAME=Type, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Type, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=Site, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Type, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Type, name=Type, value=Site, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Type}, {cf_widgettype=cfRadio, id=Type, cf_modelitemlength=107, cf_modelitemid=Type, cf_widgetid=cf_radio, name=Type, value=Link, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Type}], MODEL_ITEM_TYPE=cf_radio, MODEL_ITEM_ORDER=2}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=SiteLinkID, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=SiteLinkID, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Site/Link ID, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=SiteLinkID, cf_modelitemlength=107, cf_modelitemid=SiteLinkID, cf_widgetid=cf_text, name=SiteLinkID, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=SiteLinkID}], MODEL_ITEM_TYPE=cf_text, MODEL_ITEM_ORDER=3}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Vendor, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES={'dictClass':'Vendor'}, MODEL_ITEM_NAME=Vendor, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Vendor, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Vendor, cf_databindtype=dynDictService, cf_modelitemlength=107, style=width:90%;, cf_modelitemid=Vendor, cf_widgetid=cf_select2, name=Vendor, cf_databindparam=Vendor, cf_fieldlength=100, class=, cf_iscreateid=1, type=select2, cf_elementtype=field, cf_modelitemname=Vendor}], MODEL_ITEM_TYPE=cf_select2, MODEL_ITEM_ORDER=4}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=null, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[], MODEL_ITEM_TYPE=null, MODEL_ITEM_ORDER=5}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [End getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35c220f9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3e71b1d8] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,i.model_item_id,i.model_item_name,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, CF_BIZ_MODEL_ITEM i where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and f.form_id=i.model_id and p.proc_def_id = ? and f.form_id = ? and a.act_def_id = ? order by p.proc_def_id,f.form_id 
+==> Parameters: SSA(String), CF_SSA_Create(String), CreateSSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, MODEL_ITEM_ID, MODEL_ITEM_NAME, IS_START
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Type, Type, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Vendor, Vendor, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Title, Title, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, MAIN_TBL_PK, ??, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Category, Category, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, SiteLinkID, SiteLinkID, 1
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35c220f9]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [getAPPProcessFormConfg result : [{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=OperationMode, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=Accept;Reject;, MODEL_ITEM_OPTION_VALUES=Accept;Reject;, FORM_ID=CF_SSA_Confirm, MODEL_ITEM_NAME=OperationMode, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=ConfirmSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Operation Mode, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=field_accept;field_reject;, MODEL_ITEM_INITVALUE=Accept, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=OperationMode, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=OperationMode, name=OperationMode, value=Accept, display_fieldset=field_accept, cf_iscreateid=1, checked=checked, cf_modelitemname=OperationMode}, {cf_widgettype=cfRadio, id=OperationMode, cf_modelitemlength=107, cf_modelitemid=OperationMode, cf_widgetid=cf_radio, name=OperationMode, value=Reject, cf_fieldlength=100, class=cfRadio, display_fieldset=field_reject, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=OperationMode}], MODEL_ITEM_TYPE=cf_radio, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=RejectReason, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_reject, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Confirm, MODEL_ITEM_NAME=Reject Reason, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Reject, ACT_DEF_ID=ConfirmSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Reject Reason, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=RejectReason, cf_modelitemlength=507, cf_modelitemid=RejectReason, cf_widgetid=cf_textarea, name=Reject Reason, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Reject Reason}], MODEL_ITEM_TYPE=cf_textarea, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=4}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_accept, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Confirm, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Accept, ACT_DEF_ID=ConfirmSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Description, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=3}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=SSACode, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_accept, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Confirm, MODEL_ITEM_NAME=SSA Code, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Accept, ACT_DEF_ID=ConfirmSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=SSA Code, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_text, class=cfText cfIsReadonly, cf_fieldlength=100, type=text, cf_elementtype=field, id=SSACode, cf_modelitemlength=107, cf_modelitemid=SSACode, name=SSA Code, value=, cf_iscreateid=1, readonly=readonly, cf_modelitemname=SSA Code}], MODEL_ITEM_TYPE=cf_text, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Handle, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=HandleSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Desciption, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=TakePicture, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Handle, MODEL_ITEM_NAME=Take Picture, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=HandleSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Take Picture, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_photo, class=cfFileInfo, cf_datatype=CLOB, type=text, cf_elementtype=field, id=TakePicture, cf_number=20, cf_size=5, cf_modelitemid=TakePicture, name=Take Picture, value=, cf_iscreateid=1, cf_format=.*, readonly=readonly, cf_modelitemname=Take Picture}], MODEL_ITEM_TYPE=cf_photo, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Type, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=Site;Link;, MODEL_ITEM_OPTION_VALUES=Site;Link;, FORM_ID=CF_SSA_Create, MODEL_ITEM_NAME=Type, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=CreateSSA, IS_START=1, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Type, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=Site, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Type, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Type, name=Type, value=Site, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Type}, {cf_widgettype=cfRadio, id=Type, cf_modelitemlength=107, cf_modelitemid=Type, cf_widgetid=cf_radio, name=Type, value=Link, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Type}], MODEL_ITEM_TYPE=cf_radio, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=2}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Vendor, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES={'dictClass':'Vendor'}, FORM_ID=CF_SSA_Create, MODEL_ITEM_NAME=Vendor, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=CreateSSA, IS_START=1, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Vendor, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Vendor, cf_databindtype=dynDictService, cf_modelitemlength=107, style=width:90%;, cf_modelitemid=Vendor, cf_widgetid=cf_select2, name=Vendor, cf_databindparam=Vendor, cf_fieldlength=100, class=, cf_iscreateid=1, type=select2, cf_elementtype=field, cf_modelitemname=Vendor}], MODEL_ITEM_TYPE=cf_select2, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=4}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Title, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Create, MODEL_ITEM_NAME=Title, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=CreateSSA, IS_START=1, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Title, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Title, cf_modelitemlength=107, cf_modelitemid=Title, cf_widgetid=cf_text, name=Title, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=Title}], MODEL_ITEM_TYPE=cf_text, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Category, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=SOAC;PAC;, MODEL_ITEM_OPTION_VALUES=SOAC;PAC;, FORM_ID=CF_SSA_Create, MODEL_ITEM_NAME=Category, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=CreateSSA, IS_START=1, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Category, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=SOAC, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Category, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Category, name=Category, value=SOAC, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Category}, {cf_widgettype=cfRadio, id=Category, cf_modelitemlength=107, cf_modelitemid=Category, cf_widgetid=cf_radio, name=Category, value=PAC, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Category}], MODEL_ITEM_TYPE=cf_radio, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=SiteLinkID, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Create, MODEL_ITEM_NAME=SiteLinkID, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=CreateSSA, IS_START=1, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Site/Link ID, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=SiteLinkID, cf_modelitemlength=107, cf_modelitemid=SiteLinkID, cf_widgetid=cf_text, name=SiteLinkID, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=SiteLinkID}], MODEL_ITEM_TYPE=cf_text, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=3}]]
+Map[MODEL_ITEM_LABEL=Operation ModeMODEL_ITEM_ORDER=0]
+Map[MODEL_ITEM_LABEL=DesciptionMODEL_ITEM_ORDER=0]
+Map[MODEL_ITEM_LABEL=TitleMODEL_ITEM_ORDER=0]
+Map[MODEL_ITEM_LABEL=SSA CodeMODEL_ITEM_ORDER=1]
+Map[MODEL_ITEM_LABEL=Take PictureMODEL_ITEM_ORDER=1]
+Map[MODEL_ITEM_LABEL=CategoryMODEL_ITEM_ORDER=1]
+Map[MODEL_ITEM_LABEL=TypeMODEL_ITEM_ORDER=2]
+Map[MODEL_ITEM_LABEL=DescriptionMODEL_ITEM_ORDER=3]
+Map[MODEL_ITEM_LABEL=Site/Link IDMODEL_ITEM_ORDER=3]
+Map[MODEL_ITEM_LABEL=Reject ReasonMODEL_ITEM_ORDER=4]
+Map[MODEL_ITEM_LABEL=VendorMODEL_ITEM_ORDER=4]
+[2018-12-03 14:13:24] [http-bio-14001-exec-23] [INFO] [] [End getAPPProcessFormConfg]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getAPPOrderDetail]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getAPPOrderDetail...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51c95b0d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@14cfb6ec] will not be managed by Spring
+==>  Preparing: select d.proc_def_id, d.ACT_DEF_NAME, d.subject, d.act_def_id, d.process_id, fd.form_id, fd.data_id from WF_YI_BAN_TASK d, CF_ASSIGN_FORM_DATA fd where 1 = 1 and d.process_id = ? and d.id = fd.assignment_id order by d.end_time asc 
+==> Parameters: 8a5ba313676ec4ab016773aa9189002b(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_NAME, SUBJECT, ACT_DEF_ID, PROCESS_ID, FORM_ID, DATA_ID
+<==        Row: SSA, Create SSA, testbyAlex-001, CreateSSA, 8a5ba313676ec4ab016773aa9189002b, CF_SSA_Create, 8a5ba313676ec4ab016773aa9183002a
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@51c95b0d]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Step 1 get doneFormlist : [{PROCESS_ID=8a5ba313676ec4ab016773aa9189002b, SUBJECT=testbyAlex-001, DATA_ID=8a5ba313676ec4ab016773aa9183002a, FORM_ID=CF_SSA_Create, ACT_DEF_NAME=Create SSA, ACT_DEF_ID=CreateSSA, PROC_DEF_ID=SSA}]]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getAPPProcessFormConfg...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@624fe309] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@d194caf] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,i.model_item_id,i.model_item_name,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, CF_BIZ_MODEL_ITEM i where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and f.form_id=i.model_id and p.proc_def_id = ? order by p.proc_def_id,f.form_id 
+==> Parameters: SSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, MODEL_ITEM_ID, MODEL_ITEM_NAME, IS_START
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, Description, Description, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, MAIN_TBL_PK, ??, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, OperationMode, OperationMode, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, RejectReason, Reject Reason, 0
+<==        Row: SSA, ConfirmSSA, CF_SSA_Confirm, SSACode, SSA Code, 0
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Category, Category, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, MAIN_TBL_PK, ??, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, SiteLinkID, SiteLinkID, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Title, Title, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Type, Type, 1
+<==        Row: SSA, CreateSSA, CF_SSA_Create, Vendor, Vendor, 1
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Attachment, Attachment, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Description, Description, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, MAIN_TBL_PK, ??, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, TakePicture, Take Picture, 0
+<==      Total: 15
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@624fe309]
+CF_SSA_Confirm
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea86db] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2fb61530] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Confirm(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea86db]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=OperationMode, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=Accept;Reject;, MODEL_ITEM_OPTION_VALUES=Accept;Reject;, MODEL_ITEM_NAME=OperationMode, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Operation Mode, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=field_accept;field_reject;, MODEL_ITEM_INITVALUE=Accept, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=OperationMode, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=OperationMode, name=OperationMode, value=Accept, display_fieldset=field_accept, cf_iscreateid=1, checked=checked, cf_modelitemname=OperationMode}, {cf_widgettype=cfRadio, id=OperationMode, cf_modelitemlength=107, cf_modelitemid=OperationMode, cf_widgetid=cf_radio, name=OperationMode, value=Reject, cf_fieldlength=100, class=cfRadio, display_fieldset=field_reject, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=OperationMode}], MODEL_ITEM_TYPE=cf_radio, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=SSACode, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_accept, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=SSA Code, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Accept, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=SSA Code, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_text, class=cfText cfIsReadonly, cf_fieldlength=100, type=text, cf_elementtype=field, id=SSACode, cf_modelitemlength=107, cf_modelitemid=SSACode, name=SSA Code, value=, cf_iscreateid=1, readonly=readonly, cf_modelitemname=SSA Code}], MODEL_ITEM_TYPE=cf_text, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=null, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[], MODEL_ITEM_TYPE=null, MODEL_ITEM_ORDER=2}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_accept, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Accept, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Description, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=3}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=RejectReason, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=field_reject, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Reject Reason, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=Reject, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Reject Reason, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=RejectReason, cf_modelitemlength=507, cf_modelitemid=RejectReason, cf_widgetid=cf_textarea, name=Reject Reason, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Reject Reason}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=4}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getOrderHtmlPageForm...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [itemTypeMap : {DESCRIPTION=cf_textarea, REJECTREASON=cf_textarea, OPERATIONMODE=cf_radio, SSACODE=cf_text}]
+CF_SSA_Create
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d911bd9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@47845716] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Create(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d911bd9]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Title, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Title, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Title, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Title, cf_modelitemlength=107, cf_modelitemid=Title, cf_widgetid=cf_text, name=Title, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=Title}], MODEL_ITEM_TYPE=cf_text, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Category, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=SOAC;PAC;, MODEL_ITEM_OPTION_VALUES=SOAC;PAC;, MODEL_ITEM_NAME=Category, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Category, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=SOAC, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Category, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Category, name=Category, value=SOAC, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Category}, {cf_widgettype=cfRadio, id=Category, cf_modelitemlength=107, cf_modelitemid=Category, cf_widgetid=cf_radio, name=Category, value=PAC, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Category}], MODEL_ITEM_TYPE=cf_radio, MODEL_ITEM_ORDER=1}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Type, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=Site;Link;, MODEL_ITEM_OPTION_VALUES=Site;Link;, MODEL_ITEM_NAME=Type, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Type, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=;;, MODEL_ITEM_INITVALUE=Site, ATTR_LIST=[{cf_widgetid=cf_radio, class=cfRadio, cf_fieldlength=100, type=radio, cf_elementtype=field, id=Type, cf_widgettype=cfRadio, cf_modelitemlength=107, cf_modelitemid=Type, name=Type, value=Site, display_fieldset=, cf_iscreateid=1, checked=checked, cf_modelitemname=Type}, {cf_widgettype=cfRadio, id=Type, cf_modelitemlength=107, cf_modelitemid=Type, cf_widgetid=cf_radio, name=Type, value=Link, cf_fieldlength=100, class=cfRadio, display_fieldset=, cf_iscreateid=1, type=radio, cf_elementtype=field, cf_modelitemname=Type}], MODEL_ITEM_TYPE=cf_radio, MODEL_ITEM_ORDER=2}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=SiteLinkID, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=SiteLinkID, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Site/Link ID, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=SiteLinkID, cf_modelitemlength=107, cf_modelitemid=SiteLinkID, cf_widgetid=cf_text, name=SiteLinkID, value=, cf_fieldlength=100, class=cfText, cf_iscreateid=1, type=text, cf_elementtype=field, cf_modelitemname=SiteLinkID}], MODEL_ITEM_TYPE=cf_text, MODEL_ITEM_ORDER=3}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Vendor, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES={'dictClass':'Vendor'}, MODEL_ITEM_NAME=Vendor, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Vendor, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Vendor, cf_databindtype=dynDictService, cf_modelitemlength=107, style=width:90%;, cf_modelitemid=Vendor, cf_widgetid=cf_select2, name=Vendor, cf_databindparam=Vendor, cf_fieldlength=100, class=, cf_iscreateid=1, type=select2, cf_elementtype=field, cf_modelitemname=Vendor}], MODEL_ITEM_TYPE=cf_select2, MODEL_ITEM_ORDER=4}, {MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=null, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[], MODEL_ITEM_TYPE=null, MODEL_ITEM_ORDER=5}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getOrderHtmlPageForm...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [itemTypeMap : {CATEGORY=cf_radio, SITELINKID=cf_text, TYPE=cf_radio, VENDOR=cf_select2, TITLE=cf_text}]
+CF_SSA_Handle
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ac2fd9f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@42169eea] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Handle(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ac2fd9f]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Desciption, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=TakePicture, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Take Picture, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Take Picture, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_photo, class=cfFileInfo, cf_datatype=CLOB, type=text, cf_elementtype=field, id=TakePicture, cf_number=20, cf_size=5, cf_modelitemid=TakePicture, name=Take Picture, value=, cf_iscreateid=1, cf_format=.*, readonly=readonly, cf_modelitemname=Take Picture}], MODEL_ITEM_TYPE=cf_photo, MODEL_ITEM_ORDER=1}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getOrderHtmlPageForm...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [itemTypeMap : {DESCRIPTION=cf_textarea, TAKEPICTURE=cf_photo}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getAPPProcessFormConfg...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Step 2 get labelAndOrderMap : {CF_SSA_Handle={labelMap={DESCRIPTION=Desciption, TAKEPICTURE=Take Picture}, itemTypeMap={DESCRIPTION=cf_textarea, TAKEPICTURE=cf_photo}, orderMap={DESCRIPTION=0, TAKEPICTURE=1}, notNullMap={DESCRIPTION=false, TAKEPICTURE=false}, readonlyMap={DESCRIPTION=false, TAKEPICTURE=true}}, CF_SSA_Confirm={labelMap={DESCRIPTION=Description, REJECTREASON=Reject Reason, OPERATIONMODE=Operation Mode, SSACODE=SSA Code}, itemTypeMap={DESCRIPTION=cf_textarea, REJECTREASON=cf_textarea, OPERATIONMODE=cf_radio, SSACODE=cf_text}, orderMap={DESCRIPTION=3, REJECTREASON=4, OPERATIONMODE=0, SSACODE=1}, notNullMap={DESCRIPTION=false, REJECTREASON=false, OPERATIONMODE=false, SSACODE=false}, readonlyMap={DESCRIPTION=false, REJECTREASON=false, OPERATIONMODE=false, SSACODE=true}}, CF_SSA_Create={labelMap={CATEGORY=Category, SITELINKID=Site/Link ID, TYPE=Type, VENDOR=Vendor, TITLE=Title}, itemTypeMap={CATEGORY=cf_radio, SITELINKID=cf_text, TYPE=cf_radio, VENDOR=cf_select2, TITLE=cf_text}, orderMap={CATEGORY=1, SITELINKID=3, TYPE=2, VENDOR=4, TITLE=0}, notNullMap={CATEGORY=false, SITELINKID=false, TYPE=false, VENDOR=false, TITLE=false}, readonlyMap={CATEGORY=false, SITELINKID=false, TYPE=false, VENDOR=false, TITLE=false}}}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Start getAPPFormAttrCinfig...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68e9cf85] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@141b4f5c] will not be managed by Spring
+==>  Preparing: select t.* from CF_ACT_FORM_ACL t,wf_process_def wt where t.proc_def_unique_id=wt.id and wt.proc_def_id = ? order by t.ACT_def_unique_id 
+==> Parameters: SSA(String)
+<==    Columns: ID, PROC_DEF_UNIQUE_ID, ACT_DEF_UNIQUE_ID, FORM_ID, FORM_ACL, FORM_ACL_JSON
+<==        Row: 8a5ba31465805d920165856154ea740f, 8a5ba31364bcaefe0164bcfdf7070039, 8a5ba3146518372e0165184724d90004, CF_SSA_Create, <<BLOB>>, <<BLOB>>
+<==        Row: 8a5ba31465805d920165856154ea740a, 8a5ba31364bcaefe0164bcfdf7070039, 8a5ba3146518372e0165184724d90006, CF_SSA_Confirm, <<BLOB>>, <<BLOB>>
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@68e9cf85]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [{"Category":{"isHidden":"false","id":"Category","isRequired":"true","isReadOnly":"false","isInitialize":"false"},"Vendor":{"isHidden":"false","id":"Vendor","isRequired":"true","isReadOnly":"false","isInitialize":"false"},"SiteLinkID":{"isHidden":"false","id":"SiteLinkID","isRequired":"true","isReadOnly":"false","isInitialize":"false"},"Type":{"isHidden":"false","id":"Type","isRequired":"true","isReadOnly":"false","isInitialize":"false"},"Title":{"isHidden":"false","id":"Title","isRequired":"true","isReadOnly":"false","isInitialize":"false"}}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [{"RejectReason":{"isHidden":"false","id":"RejectReason","isRequired":"true","isReadOnly":"false","isInitialize":"false"}}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getAPPFormAttrCinfig...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Step 3 get attrConfigMap : {CF_SSA_Confirm={RejectReason={isHidden=false, id=RejectReason, isRequired=true, isReadOnly=false, isInitialize=false}}, CF_SSA_Create={Category={isHidden=false, id=Category, isRequired=true, isReadOnly=false, isInitialize=false}, SiteLinkID={isHidden=false, id=SiteLinkID, isRequired=true, isReadOnly=false, isInitialize=false}, Vendor={isHidden=false, id=Vendor, isRequired=true, isReadOnly=false, isInitialize=false}, Type={isHidden=false, id=Type, isRequired=true, isReadOnly=false, isInitialize=false}, Title={isHidden=false, id=Title, isRequired=true, isReadOnly=false, isInitialize=false}}}]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52ce24d9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@10b435ab] will not be managed by Spring
+==>  Preparing: select * from CF_SSA_Create t where t.main_tbl_pk =? 
+==> Parameters: 8a5ba313676ec4ab016773aa9183002a(String)
+<==    Columns: MAIN_TBL_PK, TITLE, CATEGORY, TYPE, SITELINKID, VENDOR
+<==        Row: 8a5ba313676ec4ab016773aa9183002a, testbyAlex-001, SOAC, Site, 1, AHS
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@52ce24d9]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [Step finish resultList : [{fieldInfos=[{ISINITIALIZE=false, ISREADONLY=false, FORM_NOTNULL=false, FORM_READONLY=false, VALUE=testbyAlex-001, LABEL=Title, ISHIDDEN=false, ORDER=0, ISREQUIRED=false, KEY=TITLE, ITEMTYPE=cf_text}, {ISINITIALIZE=false, ISREADONLY=false, FORM_NOTNULL=false, FORM_READONLY=false, VALUE=SOAC, LABEL=Category, ISHIDDEN=false, ORDER=1, ISREQUIRED=false, KEY=CATEGORY, ITEMTYPE=cf_radio}, {ISINITIALIZE=false, ISREADONLY=false, FORM_NOTNULL=false, FORM_READONLY=false, VALUE=Site, LABEL=Type, ISHIDDEN=false, ORDER=2, ISREQUIRED=false, KEY=TYPE, ITEMTYPE=cf_radio}, {ISINITIALIZE=false, ISREADONLY=false, FORM_NOTNULL=false, FORM_READONLY=false, VALUE=1, LABEL=Site/Link ID, ISHIDDEN=false, ORDER=3, ISREQUIRED=false, KEY=SITELINKID, ITEMTYPE=cf_text}, {ISINITIALIZE=false, ISREADONLY=false, FORM_NOTNULL=false, FORM_READONLY=false, VALUE=AHS, LABEL=Vendor, ISHIDDEN=false, ORDER=4, ISREQUIRED=false, KEY=VENDOR, ITEMTYPE=cf_select2}], form_id=CF_SSA_Create, taskName=Create SSA}]]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getAPPOrderDetail...]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [getAPPOrderDetail return : {"detail":[{"fieldInfos":[{"ISINITIALIZE":false,"ISREADONLY":false,"FORM_NOTNULL":false,"FORM_READONLY":false,"VALUE":"testbyAlex-001","LABEL":"Title","ISHIDDEN":false,"ORDER":"0","ISREQUIRED":false,"KEY":"TITLE","ITEMTYPE":"cf_text"},{"ISINITIALIZE":false,"ISREADONLY":false,"FORM_NOTNULL":false,"FORM_READONLY":false,"VALUE":"SOAC","LABEL":"Category","ISHIDDEN":false,"ORDER":"1","ISREQUIRED":false,"KEY":"CATEGORY","ITEMTYPE":"cf_radio"},{"ISINITIALIZE":false,"ISREADONLY":false,"FORM_NOTNULL":false,"FORM_READONLY":false,"VALUE":"Site","LABEL":"Type","ISHIDDEN":false,"ORDER":"2","ISREQUIRED":false,"KEY":"TYPE","ITEMTYPE":"cf_radio"},{"ISINITIALIZE":false,"ISREADONLY":false,"FORM_NOTNULL":false,"FORM_READONLY":false,"VALUE":"1","LABEL":"Site/Link ID","ISHIDDEN":false,"ORDER":"3","ISREQUIRED":false,"KEY":"SITELINKID","ITEMTYPE":"cf_text"},{"ISINITIALIZE":false,"ISREADONLY":false,"FORM_NOTNULL":false,"FORM_READONLY":false,"VALUE":"AHS","LABEL":"Vendor","ISHIDDEN":false,"ORDER":"4","ISREQUIRED":false,"KEY":"VENDOR","ITEMTYPE":"cf_select2"}],"form_id":"CF_SSA_Create","taskName":"Create SSA"}],"process_id":"8a5ba313676ec4ab016773aa9189002b"}]
+[2018-12-03 14:13:24] [http-bio-14001-exec-4] [INFO] [] [End getAPPOrderDetail]
+[2018-12-03 14:13:25] [http-bio-14001-exec-3] [INFO] [] [Start getFormRule]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2953c150] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@7ff4bf88] will not be managed by Spring
+==>  Preparing: select t.content,INITIALIZE_JSON,DYNAMIC_JSON from T_PLATFORM_MOBILE_FORM_RULE t where t.FORM_ID= ? 
+==> Parameters: null
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2953c150]
+[2018-12-03 14:13:25] [http-bio-14001-exec-3] [INFO] [] [End getFormRule]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [Start getAPPProcessFormConfg]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [Start getAPPProcessFormConfg...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4db69836] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@2ebe6aec] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, WF_INFO_PROCESS_DEF_MODEL wipdm where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and wipdm.id=p.id and p.proc_def_id = ? and a.act_def_id = ? 
+==> Parameters: SSA(String), HandleSSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, IS_START
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4db69836]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [Start getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30c813bd] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@173c0e5c] will not be managed by Spring
+==>  Preparing: select t.content from CF_FORM t where t.form_id=? 
+==> Parameters: CF_SSA_Handle(String)
+<==    Columns: CONTENT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30c813bd]
+[{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Desciption, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=TakePicture, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, MODEL_ITEM_NAME=Take Picture, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Take Picture, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_photo, class=cfFileInfo, cf_datatype=CLOB, type=text, cf_elementtype=field, id=TakePicture, cf_number=20, cf_size=5, cf_modelitemid=TakePicture, name=Take Picture, value=, cf_iscreateid=1, cf_format=.*, readonly=readonly, cf_modelitemname=Take Picture}], MODEL_ITEM_TYPE=cf_photo, MODEL_ITEM_ORDER=1}]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [End getOrderHtmlPageForm...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b86f892] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@34772451] will not be managed by Spring
+==>  Preparing: select distinct p.proc_def_id, a.act_def_id, f.form_id,i.model_item_id,i.model_item_name,a.is_start from WF_PROCESS_DEF p, WF_ACTIVITY_DEF a, CF_ACT_FORM f, CF_BIZ_MODEL_ITEM i where p.id = a.proc_def_unique_id and a.id =f.act_def_unique_id and f.form_id=i.model_id and p.proc_def_id = ? and f.form_id = ? and a.act_def_id = ? order by p.proc_def_id,f.form_id 
+==> Parameters: SSA(String), CF_SSA_Handle(String), HandleSSA(String)
+<==    Columns: PROC_DEF_ID, ACT_DEF_ID, FORM_ID, MODEL_ITEM_ID, MODEL_ITEM_NAME, IS_START
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Attachment, Attachment, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, MAIN_TBL_PK, ??, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, Description, Description, 0
+<==        Row: SSA, HandleSSA, CF_SSA_Handle, TakePicture, Take Picture, 0
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b86f892]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [getAPPProcessFormConfg result : [{MODEL_ITEM_READONLY=false, MODEL_ITEM_ID=Description, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Handle, MODEL_ITEM_NAME=Description, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=HandleSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Desciption, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{id=Description, cf_modelitemlength=507, cf_modelitemid=Description, cf_widgetid=cf_textarea, name=Description, value=, cf_fieldlength=500, class=cfTextArea, cf_iscreateid=1, cf_elementtype=field, cf_modelitemname=Description}], MODEL_ITEM_TYPE=cf_textarea, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=0}, {MODEL_ITEM_READONLY=true, MODEL_ITEM_ID=TakePicture, MODEL_ITEM_ORGANNAMEFIELD=, MODEL_ITEM_CONTAINER_ID=, MODEL_ITEM_OPTION_NAMES=, MODEL_ITEM_OPTION_VALUES=, FORM_ID=CF_SSA_Handle, MODEL_ITEM_NAME=Take Picture, MODEL_ITEM_CHILD_ID=, MODEL_ITEM_CONTAINER_NAME=, ACT_DEF_ID=HandleSSA, IS_START=0, MODEL_ITEM_NOTNULL=false, MODEL_ITEM_LABEL=Take Picture, MODEL_ITEM_ORGANIDFIELD=, MODEL_ITEM_OPTION_DISPLAYS=, MODEL_ITEM_INITVALUE=null, ATTR_LIST=[{cf_widgetid=cf_photo, class=cfFileInfo, cf_datatype=CLOB, type=text, cf_elementtype=field, id=TakePicture, cf_number=20, cf_size=5, cf_modelitemid=TakePicture, name=Take Picture, value=, cf_iscreateid=1, cf_format=.*, readonly=readonly, cf_modelitemname=Take Picture}], MODEL_ITEM_TYPE=cf_photo, PROC_DEF_ID=SSA, MODEL_ITEM_ORDER=1}]]
+Map[MODEL_ITEM_LABEL=DesciptionMODEL_ITEM_ORDER=0]
+Map[MODEL_ITEM_LABEL=Take PictureMODEL_ITEM_ORDER=1]
+[2018-12-03 14:13:28] [http-bio-14001-exec-23] [INFO] [] [End getAPPProcessFormConfg]
+[2018-12-03 14:13:29] [http-bio-14001-exec-8] [INFO] [] [Start getFormRule]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c8e65c4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@553bb24b] will not be managed by Spring
+==>  Preparing: select t.content,INITIALIZE_JSON,DYNAMIC_JSON from T_PLATFORM_MOBILE_FORM_RULE t where t.FORM_ID= ? 
+==> Parameters: CF_SSA_Handle(String)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c8e65c4]
+[2018-12-03 14:13:29] [http-bio-14001-exec-8] [INFO] [] [End getFormRule]
+[2018-12-03 14:13:53] [http-bio-14001-exec-24] [INFO] [] [Start uploadbase64Attachment]
+[2018-12-03 14:13:53] [http-bio-14001-exec-24] [INFO] [] [Result:{id=146661266349997, message=success, modelItemId=TakePicture, fileName=55aacd23-8122-4ea5-82c5-94021a39158f.jpeg, path=2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e}]
+[2018-12-03 14:13:53] [http-bio-14001-exec-24] [INFO] [] [End uploadbase64Attachment]
+[2018-12-03 14:13:55] [http-bio-14001-exec-18] [INFO] [] [Start uploadbase64Attachment]
+[2018-12-03 14:13:55] [http-bio-14001-exec-18] [INFO] [] [Result:{id=128519494256794, message=success, modelItemId=TakePicture, fileName=476c3e36-0787-44c6-a021-7aca778fa335.jpeg, path=2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac}]
+[2018-12-03 14:13:55] [http-bio-14001-exec-18] [INFO] [] [End uploadbase64Attachment]
+[2018-12-03 14:13:56] [http-bio-14001-exec-26] [INFO] [] [Start uploadbase64Attachment]
+[2018-12-03 14:13:56] [http-bio-14001-exec-26] [INFO] [] [Result:{id=146841487744881, message=success, modelItemId=TakePicture, fileName=61db7571-24cc-4b7a-9035-3a72a983b6de.jpeg, path=2018/12/03/12674635-d542-4a0d-803d-7134386ada49}]
+[2018-12-03 14:13:56] [http-bio-14001-exec-26] [INFO] [] [End uploadbase64Attachment]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [Start uploadAPPCloudFormOperation]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [assignmentId ： 8a5ba313676ec4ab016773aa91990031]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [formId ： CF_SSA_Handle]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [operateType ： send]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actualUserId ： ALEX]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actualOrganId ： O0000000000000025789]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actualOrganName ： Alex]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [nextActOrganStr ： ]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [nextActDefUniqueId ： ]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [formDataJsonStr ： {"Description":""}]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [processId ： 8a5ba313676ec4ab016773aa9189002b]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actDefUniqueId ： 8a5ba3146518372e0165184724d90005]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actDefId ： HandleSSA]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actDefName ： Handle SSA]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [procDefId ： SSA]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [procDefUniqueId ： 8a5ba31364bcaefe0164bcfdf7070039]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [attachmentStr ： [{"id":"146661266349997","message":"success","modelItemId":"TakePicture","fileName":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg","path":"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e"},{"id":"128519494256794","message":"success","modelItemId":"TakePicture","fileName":"476c3e36-0787-44c6-a021-7aca778fa335.jpeg","path":"2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac"},{"id":"146841487744881","message":"success","modelItemId":"TakePicture","fileName":"61db7571-24cc-4b7a-9035-3a72a983b6de.jpeg","path":"2018/12/03/12674635-d542-4a0d-803d-7134386ada49"}]]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [newFormData ： {S={}, M={CF_SSA_Handle={Description=}, CF_SSA_Create={proc_end_time=, index=0, processId=8a5ba313676ec4ab016773aa9189002b, subject=testbyAlex-001, Type=Site, actDefUniqueId=8a5ba3146518372e0165184724d90004, actDefId=CreateSSA, proc_create_time=20181203 14:13:37, Title=testbyAlex-001, procDefId=SSA, data_id=8a5ba313676ec4ab016773aa9183002a, Category=SOAC, procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, SiteLinkID=1, Vendor=AHS, ticketno=MTN-SSA-20181203-00001, proc_creator_name=ALEX, is_proc_end=0, proc_def_name=SSA, iscancel=0}}}]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [procData : {procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, processId=8a5ba313676ec4ab016773aa9189002b, formId=CF_SSA_Handle, actDefUniqueId=8a5ba3146518372e0165184724d90005, assignmentId=8a5ba313676ec4ab016773aa91990031}]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [start mutiApprove............]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [procDefUniqueId : 8a5ba31364bcaefe0164bcfdf7070039]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [actDefUniqueId : 8a5ba3146518372e0165184724d90005]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [processId : 8a5ba313676ec4ab016773aa9189002b]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [assignmentId : 8a5ba313676ec4ab016773aa91990031]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rultLogResult size: 1]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [mutiApprove ruleId : 9b7b4dcfda484c8fb5d4c70ca0d9fae9]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [queryResult sql : select ID,RULE_ID,COMPLATED_TYPE,PROC_DEF_UNIQUE_ID,ACT_DEF_UNIQUE_ID,FIELD_ACT_DEF_NAME,FIELD_ID,FIELD_VALUE,OPERATOR_TYPE,COMPLATED_COUNT,MUST_OPERATOR_NAME,MUST_OPERATOR_ID from T_SDM_MULTIAPPROVAL t where t.proc_def_unique_id='8a5ba31364bcaefe0164bcfdf7070039' and t.act_def_unique_id='8a5ba3146518372e0165184724d90005' and t.rule_id='9b7b4dcfda484c8fb5d4c70ca0d9fae9' ]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [queryResult size : 0]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [step 1。判断当前流程和环节是否需要会签]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [####################[INFO]--mutiApprove 没有发现会签规则，走正常流转规则]
+####################[INFO]--mutiApprove 没有发现会签规则，走正常流转规则
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c8549de] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@65db914d] will not be managed by Spring
+==>  Preparing: select id,RULE_NAME ruleName,EVENT,ACT_DEF_NAME actDefName,ACT_DEF_UNIQUE_ID actDefUniqueId,WF_NAME wfName,PROCDEFUNIQUEID,CONDITION,CONDITION_VALUE conditionValue,CONDITION_EXPRESSION conditionExpression,ACTION_DESC actionDesc,CREATOR,CREATE_TIME createTime,ISCFORM,RULE_ORDER ruleOrder from T_PLATFROM_WF_RULE WHERE ACT_DEF_UNIQUE_ID = ? order by RULE_ORDER asc 
+==> Parameters: 8a5ba3146518372e0165184724d90005(String)
+<==    Columns: ID, RULENAME, EVENT, ACTDEFNAME, ACTDEFUNIQUEID, WFNAME, PROCDEFUNIQUEID, CONDITION, CONDITIONVALUE, CONDITIONEXPRESSION, ACTIONDESC, CREATOR, CREATETIME, ISCFORM, RULEORDER
+<==        Row: 46a9d441e5534a4aa2aa8b1a57ffc66e, SSA Handle send to Confirm, On Task Complete, Handle SSA, 8a5ba3146518372e0165184724d90005, SSA, 8a5ba31364bcaefe0164bcfdf7070039, <<BLOB>>, C1, [C1], null, wuyu, 2018-07-22 15:53:33, 1, 166
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4c8549de]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65270606] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@76c3439] will not be managed by Spring
+==>  Preparing: select RULEID,CONDITION_NAME conditionName,FIELD,RELATION_OPERATOR relationOperator,CONDITION_INFO conditionInfo from T_PLATFROM_WF_RULE_CONDITION WHERE RULEID = ? 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==    Columns: RULEID, CONDITIONNAME, FIELD, RELATIONOPERATOR, CONDITIONINFO
+<==        Row: 46a9d441e5534a4aa2aa8b1a57ffc66e, C1, originator (CF_SSA_Create), does not equal, blank
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65270606]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rueleNam:SSA Handle send to Confirm ruleId:46a9d441e5534a4aa2aa8b1a57ffc66e---{C1=true}]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50b7fd03] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@67a7f639] will not be managed by Spring
+==>  Preparing: select id,RULEID,ACTION_TYPE actionType,NEXT_ACT_DEF_NAME nextActDefName,NEXT_ACT_DEF_UNIQUE_ID nextActDefUniqueId,ACT_PROCESSOR actProcessor,ACT_PROCESSORID actProcessorid,COPYTO_PROCESSOR copytoProcessor,COPYTO_PROCESSORID copytoProcessorid,ACT_SPECIFIED_PROCESSOR actSpecifiedProcessor,ACT_SPECIFIED_PROCESSORID actSpecifiedProcessorid,COPYTO_SPECIFIED_PROCESSOR copytoSpecifiedProcessor,COPYTO_SPECIFIED_PROCESSORID copytoSpecifiedProcessorid,CREATOR,CREATE_TIME createTime,AUTOSUBMITSUBTICKET,ALLSUBTICKETCLOSED,ISMULTISIGN,BUSINESS_STATUS businessStatus from T_PLATFROM_WF_RULE_TRANSITION WHERE RULEID = ? 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==    Columns: ID, RULEID, ACTIONTYPE, NEXTACTDEFNAME, NEXTACTDEFUNIQUEID, ACTPROCESSOR, ACTPROCESSORID, COPYTOPROCESSOR, COPYTOPROCESSORID, ACTSPECIFIEDPROCESSOR, ACTSPECIFIEDPROCESSORID, COPYTOSPECIFIEDPROCESSOR, COPYTOSPECIFIEDPROCESSORID, CREATOR, CREATETIME, AUTOSUBMITSUBTICKET, ALLSUBTICKETCLOSED, ISMULTISIGN, BUSINESSSTATUS
+<==        Row: 534e85eba542479b89e7ae095742c6b0, 46a9d441e5534a4aa2aa8b1a57ffc66e, Set Next Transition, Confirm SSA, 8a5ba3146518372e0165184724d90006, null, null, null, null, MS_SSA_Management, O0000000000000025667, null, null, SUPERADMIN, 2018-08-29 12:37:28, null, null, null, null
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50b7fd03]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [nextActList : [{organList=[{organId=O0000000000000025667, organName=MS_SSA_Management}], actDefUniqueId=8a5ba3146518372e0165184724d90006, businessStatus=null}]]
+start saveActBigTableData.
+select FORM_TABLE_COLUM_NAME,BIG_TABLE_COLUM_NAME from T_SDM_COLUM_REF t where  BIG_TABLE_NAME = 'BT_SSA' and t.PROC_DEF_UNIQUE_ID='8a5ba31364bcaefe0164bcfdf7070039' and t.FORM_ID = 'CF_SSA_Handle'
+【BIG TABLE WARNING】 merge big table warning.CF_SSA_Handle--assignmentId not mapping!!!
+{TakePicture=column_11, Description=column_12}
+{proc_end_time=, Description=, index=1, processId=8a5ba313676ec4ab016773aa9189002b, subject=testbyAlex-001, actDefUniqueId=8a5ba3146518372e0165184724d90005, actDefId=HandleSSA, proc_create_time=20181203 14:13:37, procDefId=SSA, assignmentId=8a5ba313676ec4ab016773aa91990031, TakePicture=, data_id=8a69a98b67698c32016773aae09d0025, procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, ticketno=MTN-SSA-20181203-00001, proc_creator_name=ALEX, is_proc_end=0, wodataid=8a5ba313676ec4ab016773aa9183002a, proc_def_name=SSA, iscancel=0}
+【BIG TABLE WARNING】 merge big table warning.CF_SSA_Handle--wodataid not mapping!!!
+{TakePicture=column_11, Description=column_12}
+{proc_end_time=, Description=, index=1, processId=8a5ba313676ec4ab016773aa9189002b, subject=testbyAlex-001, actDefUniqueId=8a5ba3146518372e0165184724d90005, actDefId=HandleSSA, proc_create_time=20181203 14:13:37, procDefId=SSA, assignmentId=8a5ba313676ec4ab016773aa91990031, TakePicture=, data_id=8a69a98b67698c32016773aae09d0025, procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, ticketno=MTN-SSA-20181203-00001, proc_creator_name=ALEX, is_proc_end=0, wodataid=8a5ba313676ec4ab016773aa9183002a, proc_def_name=SSA, iscancel=0}
+MERGE INTO BT_SSA B USING (SELECT '' AS column_12, '' AS column_11, '8a5ba313676ec4ab016773aa9189002b' AS PROCESS_ID,               '8a69a98b67698c32016773aae0b40028' AS ASSIGNMENTID,             'MTN-SSA-20181203-00001' AS TICKETNO,                 '8a5ba313676ec4ab016773aa9183002a' AS WODATAID,                 '8a69a98b67698c32016773aae09d0025' AS CF_SSA_Handle,     'testbyAlex-001' AS SUBJECT,                  'Running' AS TICKET_STATUS,            '' AS SLA_STATUS,               'null' AS BUSINESS_STATUS,          '8a5ba31364bcaefe0164bcfdf7070039' AS PROC_DEF_UNIQUE_ID,       'SSA' AS PROC_DEF_NAME,            'Confirm SSA' AS CURRENT_ACT_DEF_NAME,     'MS_SSA_Management' AS ALL_PROCESSOR_ORGAN_NAME, 'ALEX' AS ORIGINATOR,               '20181203 14:13:37' AS PROC_CREATE_TIME,         '' AS PROC_END_TIME,            '20181203 14:13:57' AS ACTIVITY_CREATE_TIME,     '' AS FLOWSTATE,                '' AS CORRELATIONTICKETNOS,     '' AS TIMEOUTDURATION            from DUAL) C ON (B.PROCESS_ID=C.PROCESS_ID) WHEN MATCHED THEN UPDATE SET B.column_12=C.column_12,B.column_11=C.column_11,B.ASSIGNMENTID=C.ASSIGNMENTID,                        B.TICKETNO=C.TICKETNO,                                B.WODATAID=C.WODATAID,                                B.CF_SSA_Handle=C.CF_SSA_Handle,                B.SUBJECT=C.SUBJECT,                                  B.TICKET_STATUS=C.TICKET_STATUS,                      B.SLA_STATUS=C.SLA_STATUS,                            B.BUSINESS_STATUS=C.BUSINESS_STATUS,                  B.PROC_DEF_UNIQUE_ID=C.PROC_DEF_UNIQUE_ID,            B.PROC_DEF_NAME=C.PROC_DEF_NAME,                      B.CURRENT_ACT_DEF_NAME=C.CURRENT_ACT_DEF_NAME,        B.ALL_PROCESSOR_ORGAN_NAME=C.ALL_PROCESSOR_ORGAN_NAME,B.ORIGINATOR=C.ORIGINATOR,                            B.PROC_CREATE_TIME=C.PROC_CREATE_TIME,                B.PROC_END_TIME=C.PROC_END_TIME,                      B.ACTIVITY_CREATE_TIME=C.ACTIVITY_CREATE_TIME,        B.FLOWSTATE=C.FLOWSTATE,                              B.CORRELATIONTICKETNOS=C.CORRELATIONTICKETNOS,        B.TIMEOUTDURATION=C.TIMEOUTDURATION                   WHEN NOT MATCHED THEN INSERT (column_12,column_11,PROCESS_ID,ASSIGNMENTID,TICKETNO,WODATAID,CF_SSA_Handle,SUBJECT,TICKET_STATUS,SLA_STATUS,BUSINESS_STATUS,PROC_DEF_UNIQUE_ID,PROC_DEF_NAME,CURRENT_ACT_DEF_NAME,ALL_PROCESSOR_ORGAN_NAME,ORIGINATOR,PROC_CREATE_TIME,PROC_END_TIME,ACTIVITY_CREATE_TIME,FLOWSTATE,CORRELATIONTICKETNOS,TIMEOUTDURATION) VALUES ('', '', '8a5ba313676ec4ab016773aa9189002b','8a69a98b67698c32016773aae0b40028','MTN-SSA-20181203-00001','8a5ba313676ec4ab016773aa9183002a','8a69a98b67698c32016773aae09d0025','testbyAlex-001','Running','','null','8a5ba31364bcaefe0164bcfdf7070039','SSA','Confirm SSA','MS_SSA_Management','ALEX','20181203 14:13:37','','20181203 14:13:57','','','')
+select FORM_TABLE_COLUM_NAME,BIG_TABLE_COLUM_NAME from T_SDM_COLUM_REF t where  BIG_TABLE_NAME = 'BT_SSA' and t.PROC_DEF_UNIQUE_ID='8a5ba31364bcaefe0164bcfdf7070039' and t.FORM_ID = 'CF_SSA_Create'
+【BIG TABLE WARNING】 merge big table warning.CF_SSA_Create--assignmentId not mapping!!!
+{Category=column_17, SiteLinkID=column_19, Vendor=column_18, Type=column_20, Title=column_21}
+{proc_end_time=, index=0, processId=8a5ba313676ec4ab016773aa9189002b, subject=testbyAlex-001, Type=Site, actDefUniqueId=8a5ba3146518372e0165184724d90004, actDefId=CreateSSA, proc_create_time=20181203 14:13:37, Title=testbyAlex-001, assignmentId=8a5ba313676ec4ab016773aa918f002e, procDefId=SSA, data_id=8a5ba313676ec4ab016773aa9183002a, Category=SOAC, procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, SiteLinkID=1, Vendor=AHS, ticketno=MTN-SSA-20181203-00001, proc_creator_name=ALEX, is_proc_end=0, wodataid=8a5ba313676ec4ab016773aa9183002a, proc_def_name=SSA, iscancel=0}
+【BIG TABLE WARNING】 merge big table warning.CF_SSA_Create--wodataid not mapping!!!
+{Category=column_17, SiteLinkID=column_19, Vendor=column_18, Type=column_20, Title=column_21}
+{proc_end_time=, index=0, processId=8a5ba313676ec4ab016773aa9189002b, subject=testbyAlex-001, Type=Site, actDefUniqueId=8a5ba3146518372e0165184724d90004, actDefId=CreateSSA, proc_create_time=20181203 14:13:37, Title=testbyAlex-001, assignmentId=8a5ba313676ec4ab016773aa918f002e, procDefId=SSA, data_id=8a5ba313676ec4ab016773aa9183002a, Category=SOAC, procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039, SiteLinkID=1, Vendor=AHS, ticketno=MTN-SSA-20181203-00001, proc_creator_name=ALEX, is_proc_end=0, wodataid=8a5ba313676ec4ab016773aa9183002a, proc_def_name=SSA, iscancel=0}
+MERGE INTO BT_SSA B USING (SELECT 'Site' AS column_20, 'testbyAlex-001' AS column_21, 'SOAC' AS column_17, '1' AS column_19, 'AHS' AS column_18, '8a5ba313676ec4ab016773aa9189002b' AS PROCESS_ID,               '8a69a98b67698c32016773aae0b40028' AS ASSIGNMENTID,             'MTN-SSA-20181203-00001' AS TICKETNO,                 '8a5ba313676ec4ab016773aa9183002a' AS WODATAID,                 '8a5ba313676ec4ab016773aa9183002a' AS CF_SSA_Create,     'testbyAlex-001' AS SUBJECT,                  'Running' AS TICKET_STATUS,            '' AS SLA_STATUS,               'null' AS BUSINESS_STATUS,          '8a5ba31364bcaefe0164bcfdf7070039' AS PROC_DEF_UNIQUE_ID,       'SSA' AS PROC_DEF_NAME,            'Confirm SSA' AS CURRENT_ACT_DEF_NAME,     'MS_SSA_Management' AS ALL_PROCESSOR_ORGAN_NAME, 'ALEX' AS ORIGINATOR,               '20181203 14:13:37' AS PROC_CREATE_TIME,         '' AS PROC_END_TIME,            '20181203 14:13:57' AS ACTIVITY_CREATE_TIME,     '' AS FLOWSTATE,                '' AS CORRELATIONTICKETNOS,     '' AS TIMEOUTDURATION            from DUAL) C ON (B.PROCESS_ID=C.PROCESS_ID) WHEN MATCHED THEN UPDATE SET B.column_20=C.column_20,B.column_21=C.column_21,B.column_17=C.column_17,B.column_19=C.column_19,B.column_18=C.column_18,B.ASSIGNMENTID=C.ASSIGNMENTID,                        B.TICKETNO=C.TICKETNO,                                B.WODATAID=C.WODATAID,                                B.CF_SSA_Create=C.CF_SSA_Create,                B.SUBJECT=C.SUBJECT,                                  B.TICKET_STATUS=C.TICKET_STATUS,                      B.SLA_STATUS=C.SLA_STATUS,                            B.BUSINESS_STATUS=C.BUSINESS_STATUS,                  B.PROC_DEF_UNIQUE_ID=C.PROC_DEF_UNIQUE_ID,            B.PROC_DEF_NAME=C.PROC_DEF_NAME,                      B.CURRENT_ACT_DEF_NAME=C.CURRENT_ACT_DEF_NAME,        B.ALL_PROCESSOR_ORGAN_NAME=C.ALL_PROCESSOR_ORGAN_NAME,B.ORIGINATOR=C.ORIGINATOR,                            B.PROC_CREATE_TIME=C.PROC_CREATE_TIME,                B.PROC_END_TIME=C.PROC_END_TIME,                      B.ACTIVITY_CREATE_TIME=C.ACTIVITY_CREATE_TIME,        B.FLOWSTATE=C.FLOWSTATE,                              B.CORRELATIONTICKETNOS=C.CORRELATIONTICKETNOS,        B.TIMEOUTDURATION=C.TIMEOUTDURATION                   WHEN NOT MATCHED THEN INSERT (column_20,column_21,column_17,column_19,column_18,PROCESS_ID,ASSIGNMENTID,TICKETNO,WODATAID,CF_SSA_Create,SUBJECT,TICKET_STATUS,SLA_STATUS,BUSINESS_STATUS,PROC_DEF_UNIQUE_ID,PROC_DEF_NAME,CURRENT_ACT_DEF_NAME,ALL_PROCESSOR_ORGAN_NAME,ORIGINATOR,PROC_CREATE_TIME,PROC_END_TIME,ACTIVITY_CREATE_TIME,FLOWSTATE,CORRELATIONTICKETNOS,TIMEOUTDURATION) VALUES ('Site', 'testbyAlex-001', 'SOAC', '1', 'AHS', '8a5ba313676ec4ab016773aa9189002b','8a69a98b67698c32016773aae0b40028','MTN-SSA-20181203-00001','8a5ba313676ec4ab016773aa9183002a','8a5ba313676ec4ab016773aa9183002a','testbyAlex-001','Running','','null','8a5ba31364bcaefe0164bcfdf7070039','SSA','Confirm SSA','MS_SSA_Management','ALEX','20181203 14:13:37','','20181203 14:13:57','','','')
+end saveActBigTableData.
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@53e35fb2] will be managed by Spring
+==>  Preparing: select id,RULE_NAME ruleName,EVENT,ACT_DEF_NAME actDefName,ACT_DEF_UNIQUE_ID actDefUniqueId,WF_NAME wfName,PROCDEFUNIQUEID,CONDITION,CONDITION_VALUE conditionValue,CONDITION_EXPRESSION conditionExpression,ACTION_DESC actionDesc,CREATOR,CREATE_TIME createTime,ISCFORM,RULE_ORDER ruleOrder from T_PLATFROM_WF_RULE WHERE ACT_DEF_UNIQUE_ID = ? order by RULE_ORDER asc 
+==> Parameters: 8a5ba3146518372e0165184724d90005(String)
+<==    Columns: ID, RULENAME, EVENT, ACTDEFNAME, ACTDEFUNIQUEID, WFNAME, PROCDEFUNIQUEID, CONDITION, CONDITIONVALUE, CONDITIONEXPRESSION, ACTIONDESC, CREATOR, CREATETIME, ISCFORM, RULEORDER
+<==        Row: 46a9d441e5534a4aa2aa8b1a57ffc66e, SSA Handle send to Confirm, On Task Complete, Handle SSA, 8a5ba3146518372e0165184724d90005, SSA, 8a5ba31364bcaefe0164bcfdf7070039, <<BLOB>>, C1, [C1], null, wuyu, 2018-07-22 15:53:33, 1, 166
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select RULEID,CONDITION_NAME conditionName,FIELD,RELATION_OPERATOR relationOperator,CONDITION_INFO conditionInfo from T_PLATFROM_WF_RULE_CONDITION WHERE RULEID = ? 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==    Columns: RULEID, CONDITIONNAME, FIELD, RELATIONOPERATOR, CONDITIONINFO
+<==        Row: 46a9d441e5534a4aa2aa8b1a57ffc66e, C1, originator (CF_SSA_Create), does not equal, blank
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rueleNam:SSA Handle send to Confirm ruleId:46a9d441e5534a4aa2aa8b1a57ffc66e---{C1=true}]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select ID,RULEID,ACTION_TYPE actionType,MESSAGE_NAME messageName,MESSAGE_TYPE messageType,RECEIVER,RECEIVER_ID receiverid,TITLE,MESSAGE,CREATOR_NAME creatorName,CREATE_TIME createTime,PROC_ACT_NAME procActName,ACT_DEF_ID actDefId,LOOP_INTERVAL loopInterval,LOOP_TIMES loopTimes,WORKITEM_RECIPIENT workitemRecipient,VARIABLE_TITLE variableTitle,VARIABLE_MESSAGE variableMessage,ACT_FORM_TITLE actFormNameTitle,ACT_FORM_MESSAGE actFormNameMessage from T_PLATFROM_WF_RULE_MESSAGE WHERE RULEID = ? 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select id,RULEID,FIELDID,FIELDNAME,VALUE,FORMID,CREATOR,CREATE_TIME createTime,TABLENAME,ISFIXED from T_PLATFROM_WF_RULE_ATTRIBUTE WHERE RULEID = ? 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [ Start interfaceVoke......]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select * from t_platfrom_wf_rule_modeldata where RULEID = '46a9d441e5534a4aa2aa8b1a57ffc66e' 
+==> Parameters: 
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select t.sub_proc_def_unique_id,t.isbyhand from T_PLATFROM_WF_RULE_CREATESUBTK t where t.ruleid = ? and rownum = 1 
+==> Parameters: 46a9d441e5534a4aa2aa8b1a57ffc66e(String)
+<==      Total: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [suspendSLA Start ...]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [wodataid ---=null]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [resumeSLA Start ...]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [wodataid ---=null]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [ autoSubmitData Start...]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select id,RULE_NAME ruleName,EVENT,ACT_DEF_NAME actDefName,ACT_DEF_UNIQUE_ID actDefUniqueId,WF_NAME wfName,PROCDEFUNIQUEID,CONDITION,CONDITION_VALUE conditionValue,CONDITION_EXPRESSION conditionExpression,ACTION_DESC actionDesc,CREATOR,CREATE_TIME createTime,ISCFORM,RULE_ORDER ruleOrder from T_PLATFROM_WF_RULE WHERE ACT_DEF_UNIQUE_ID = ? 
+==> Parameters: 8a5ba3146518372e0165184724d90006(String)
+<==    Columns: ID, RULENAME, EVENT, ACTDEFNAME, ACTDEFUNIQUEID, WFNAME, PROCDEFUNIQUEID, CONDITION, CONDITIONVALUE, CONDITIONEXPRESSION, ACTIONDESC, CREATOR, CREATETIME, ISCFORM, RULEORDER
+<==        Row: cb3de6307cf74e92b3a508126b31934e, SSA Confirm close the ticket, On Task Complete, Confirm SSA, 8a5ba3146518372e0165184724d90006, SSA, 8a5ba31364bcaefe0164bcfdf7070039, <<BLOB>>, C1,  [C1] , null, SUPERADMIN, 2018-07-22 16:42:18, 1, 352
+<==        Row: be6768066cb24b06bc52902e058585a2, SSA Confirm reject to Create, On Task Complete, Confirm SSA, 8a5ba3146518372e0165184724d90006, SSA, 8a5ba31364bcaefe0164bcfdf7070039, <<BLOB>>, C1, [C1], null, wuyu, 2018-07-22 16:05:22, 1, 257
+<==        Row: 3efbe131014549fda0f853721b7e47f2, SSA Code, On Task Complete, Confirm SSA, 8a5ba3146518372e0165184724d90006, SSA, 8a5ba31364bcaefe0164bcfdf7070039, <<BLOB>>, C1, [C1], null, SUPERADMIN, 2018-11-26 20:55:41, 1, null
+<==      Total: 3
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select RULEID,CONDITION_NAME conditionName,FIELD,RELATION_OPERATOR relationOperator,CONDITION_INFO conditionInfo from T_PLATFROM_WF_RULE_CONDITION WHERE RULEID = ? 
+==> Parameters: cb3de6307cf74e92b3a508126b31934e(String)
+<==    Columns: RULEID, CONDITIONNAME, FIELD, RELATIONOPERATOR, CONDITIONINFO
+<==        Row: cb3de6307cf74e92b3a508126b31934e, C1, OperationMode (CF_SSA_Confirm), equals, Accept
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rueleNam:SSA Confirm close the ticket ruleId:cb3de6307cf74e92b3a508126b31934e---{C1=false}]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select RULEID,CONDITION_NAME conditionName,FIELD,RELATION_OPERATOR relationOperator,CONDITION_INFO conditionInfo from T_PLATFROM_WF_RULE_CONDITION WHERE RULEID = ? 
+==> Parameters: be6768066cb24b06bc52902e058585a2(String)
+<==    Columns: RULEID, CONDITIONNAME, FIELD, RELATIONOPERATOR, CONDITIONINFO
+<==        Row: be6768066cb24b06bc52902e058585a2, C1, OperationMode (CF_SSA_Confirm), equals, Reject
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rueleNam:SSA Confirm reject to Create ruleId:be6768066cb24b06bc52902e058585a2---{C1=false}]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572] from current transaction
+==>  Preparing: select RULEID,CONDITION_NAME conditionName,FIELD,RELATION_OPERATOR relationOperator,CONDITION_INFO conditionInfo from T_PLATFROM_WF_RULE_CONDITION WHERE RULEID = ? 
+==> Parameters: 3efbe131014549fda0f853721b7e47f2(String)
+<==    Columns: RULEID, CONDITIONNAME, FIELD, RELATIONOPERATOR, CONDITIONINFO
+<==        Row: 3efbe131014549fda0f853721b7e47f2, C1, OperationMode (CF_SSA_Confirm), equals, Accept
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [rueleNam:SSA Code ruleId:3efbe131014549fda0f853721b7e47f2---{C1=false}]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [ autoSubmitData End...]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1b444572]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [Start getDataTableInfo..]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18b804dc] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@497ecac1] will not be managed by Spring
+==>  Preparing: select FORM_ID,DATA_ID from CF_ASSIGN_FORM_DATA where ASSIGNMENT_ID=? 
+==> Parameters: 8a5ba313676ec4ab016773aa91990031(String)
+<==    Columns: FORM_ID, DATA_ID
+<==        Row: CF_SSA_Handle, 8a69a98b67698c32016773aae09d0025
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@18b804dc]
+[2018-12-03 14:13:57] [http-bio-14001-exec-25] [INFO] [] [End getDataTableInfo..]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56ac4351] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@885195] will not be managed by Spring
+==>  Preparing: select PARAM_VALUE from sys_parameter where PARAM_TYPE=? and PARAM_ID=? 
+==> Parameters: CF_WO(String), UPLOAD_PATH(String)
+<==    Columns: PARAM_VALUE
+<==        Row: /opt/netwatcher/sdm/sharedata/upload/workflow/
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56ac4351]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29734ecc] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@49632fc3] will not be managed by Spring
+==>  Executing: select TakePicture as RESULT from CF_SSA_Handle where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+<==    Columns: RESULT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29734ecc]
+[2018-12-03 14:13:58] [http-bio-14001-exec-25] [INFO] [] [attachmentResult : [{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"}]]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74714c8a] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@74ad5e85] will not be managed by Spring
+==>  Executing: update CF_SSA_Handle set TakePicture = '[{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"}]' where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74714c8a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@734873d5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@24ab4e37] will not be managed by Spring
+==>  Executing: select TakePicture as RESULT from CF_SSA_Handle where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+<==    Columns: RESULT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@734873d5]
+[2018-12-03 14:13:58] [http-bio-14001-exec-25] [INFO] [] [attachmentResult : [{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"},{"2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac":"476c3e36-0787-44c6-a021-7aca778fa335.jpeg"}]]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48b91faf] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@49f125c1] will not be managed by Spring
+==>  Executing: update CF_SSA_Handle set TakePicture = '[{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"},{"2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac":"476c3e36-0787-44c6-a021-7aca778fa335.jpeg"}]' where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@48b91faf]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d428eba] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@256e930f] will not be managed by Spring
+==>  Executing: select TakePicture as RESULT from CF_SSA_Handle where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+<==    Columns: RESULT
+<==        Row: <<BLOB>>
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d428eba]
+[2018-12-03 14:13:59] [http-bio-14001-exec-25] [INFO] [] [attachmentResult : [{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"},{"2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac":"476c3e36-0787-44c6-a021-7aca778fa335.jpeg"},{"2018/12/03/12674635-d542-4a0d-803d-7134386ada49":"61db7571-24cc-4b7a-9035-3a72a983b6de.jpeg"}]]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25ec35a4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@539aa678] will not be managed by Spring
+==>  Executing: update CF_SSA_Handle set TakePicture = '[{"2018/12/03/8506b12c-ee59-45d2-865c-33decd242c6e":"55aacd23-8122-4ea5-82c5-94021a39158f.jpeg"},{"2018/12/03/6faba858-87ac-4dd5-9f77-3a613b781aac":"476c3e36-0787-44c6-a021-7aca778fa335.jpeg"},{"2018/12/03/12674635-d542-4a0d-803d-7134386ada49":"61db7571-24cc-4b7a-9035-3a72a983b6de.jpeg"}]' where MAIN_TBL_PK= '8a69a98b67698c32016773aae09d0025' 
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25ec35a4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@245d713d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@4b7236e8] will not be managed by Spring
+==>  Preparing: INSERT INTO SDM_OPERATE_LOG ( id,TICKET_NO,TYPE,ACTION,USERNAME,IP,OPERATE_TIME,REMARK ) VALUES ( ?,?,?,?,?,?,?,? ) 
+==> Parameters: b3ed156799df4e618e6940fe640299f9(String), (String), SSA(String), submit(String), Alex(String), 10.233.41.11(String), 2018-12-03 14:13:59(String), app:submit(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@245d713d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ff2599e] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@20005f4e] will not be managed by Spring
+==>  Preparing: INSERT INTO PMP_WF_OPERATE_LOG ( id,PROCESS_ID,WODATAID,TICKET_NO,PROC_DEF_UNIQUE_ID,PROC_DEF_NAME,ACT_DEF_UNIQUE_ID,ACT_DEF_NAME,TYPE,IP,ACTION,USERNAME,USERID,REMARK,OPEN_URL,OPEN_TYPE ) VALUES ( ?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? ) 
+==> Parameters: 855de884f2124c5f8df480f6d45bbef1(String), 8a5ba313676ec4ab016773aa9189002b(String), (String), (String), 8a5ba31364bcaefe0164bcfdf7070039(String), SSA(String), 8a5ba3146518372e0165184724d90005(String), Handle SSA(String), app(String), 10.233.41.11(String), submit(String), Alex(String), O0000000000000025789(String), submit(String), jsp/cform/tasklist/formforward.jsp?&assignmentId=8a5ba313676ec4ab016773aa91990031&internalId=8a5ba313676ec4ab016773aa91990031&procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039&actDefUniqueId=8a5ba3146518372e0165184724d90005&actDefId=HandleSSA(String), 1(String)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3ff2599e]
+[2018-12-03 14:13:59] [http-bio-14001-exec-25] [INFO] [] [End uploadAPPCloudFormOperation]
+[2018-12-03 14:14:00] [startQuertz_Worker-7] [INFO] [] [Start updateAppAttachmentService...]
+[2018-12-03 14:14:00] [startQuertz_Worker-7] [INFO] [] [Start updateAttachmentTemp...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e37d096] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@f7b3c9e] will not be managed by Spring
+==>  Preparing: select MAIN_TBL_PK,ATTACHMENT,FORM_ID,FILED_ID,ATTACHMENT_ID from ATTACHMENT_CONF where flag='0' 
+==> Parameters: 
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4e37d096]
+[2018-12-03 14:14:00] [startQuertz_Worker-7] [INFO] [] [get AttachmentTemp size : 0]
+[2018-12-03 14:14:00] [startQuertz_Worker-7] [INFO] [] [End updateAttachmentTemp...]
+[2018-12-03 14:14:00] [startQuertz_Worker-7] [INFO] [] [End updateAppAttachmentService...]
+[2018-12-03 14:14:00] [http-bio-14001-exec-9] [INFO] [] [Start getAPPDoneOrderListTotalCount]
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [Start getAPPTodoOrderList]
+[2018-12-03 14:14:00] [http-bio-14001-exec-9] [INFO] [] [Start getAPPDoneOrderListTotalCount...]
+Creating a new SqlSession
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [Start getAPPTodoOrderList...]
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4965db37] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@662f6844] will not be managed by Spring
+==>  Preparing: SELECT COUNT(1) AS COUNT from (select PROCESS_ID from WF_YI_BAN_TASK t where 1=1 and organ_id = ? and t.proc_def_id = ? group by PROCESS_ID having count(1) > 0) t 
+==> Parameters: O0000000000000025789(String), SSA(String)
+<==    Columns: COUNT
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4965db37]
+[2018-12-03 14:14:00] [http-bio-14001-exec-9] [INFO] [] [End getAPPDoneOrderListTotalCount : 6]
+[2018-12-03 14:14:00] [http-bio-14001-exec-9] [INFO] [] [End getAPPDoneOrderListTotalCount]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6410bddd] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@12ae60da] will not be managed by Spring
+==>  Preparing: SELECT * FROM (SELECT TARGET.*, ROWNUM RN from (SELECT t.*, f.form_id, row_number() over(partition BY t.proc_def_unique_id ORDER BY t.proc_def_unique_id, t.proc_create_time DESC) rnl FROM (select * from WF_DAI_BAN_TASK where organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? )) t, CF_ACT_FORM f where t.act_def_unique_id = f.act_def_unique_id order by t.PROC_CREATE_TIME desc) TARGET WHERE ROWNUM <= ?) WHERE RN >? 
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), 10(String), 0(String)
+[2018-12-03 14:14:00] [http-bio-14001-exec-5] [INFO] [] [Start getAPPToDoOrderListTotalCount]
+[2018-12-03 14:14:00] [http-bio-14001-exec-5] [INFO] [] [Start getAPPToDoOrderListTotalCount...]
+[2018-12-03 14:14:00] [http-bio-14001-exec-3] [INFO] [] [Start getAPPDoneOrderListTotalCount]
+[2018-12-03 14:14:00] [http-bio-14001-exec-3] [INFO] [] [Start getAPPDoneOrderListTotalCount...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8d627f6] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@1f76e9b1] will not be managed by Spring
+==>  Preparing: SELECT COUNT(1) AS COUNT from (select PROCESS_ID from WF_YI_BAN_TASK t where 1=1 and organ_id = ? and t.proc_def_id = ? group by PROCESS_ID having count(1) > 0) t 
+==> Parameters: O0000000000000025789(String), SSA(String)
+<==    Columns: COUNT
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8d627f6]
+[2018-12-03 14:14:00] [http-bio-14001-exec-3] [INFO] [] [End getAPPDoneOrderListTotalCount : 6]
+[2018-12-03 14:14:00] [http-bio-14001-exec-3] [INFO] [] [End getAPPDoneOrderListTotalCount]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ce448d3] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@6c37ece9] will not be managed by Spring
+==>  Preparing: select COUNT(1) AS COUNT from WF_DAI_BAN_TASK t where t.organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? ) and t.proc_def_id = ? 
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), SSA(String)
+[2018-12-03 14:14:00] [http-bio-14001-exec-27] [INFO] [] [Start getAPPToDoOrderListTotalCount]
+[2018-12-03 14:14:00] [http-bio-14001-exec-27] [INFO] [] [Start getAPPToDoOrderListTotalCount...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ae89947] was not registered for synchronization because synchronization is not active
+<==    Columns: ID, ORGAN_ID, ORGAN_NAME, CREATE_TIME, ACTIVITY_ID, ACT_DEF_UNIQUE_ID, ACT_DEF_ID, ACT_DEF_NAME, ACT_LIMIT_TIME, ACT_WARN_TIME, PROCESS_ID, PROC_DEF_UNIQUE_ID, PROC_DEF_ID, PROC_DEF_NAME, PROC_CREATE_TIME, PROC_CREATOR_ID, PROC_CREATOR_NAME, PRE_ACT_DEF_NAMES, PRE_ORGAN_NAMES, PRIMARY_KEY, PROCESS_TYPE, IS_VISIBLE, SYS_SUBJECT, PROC_SUBJECT, TYPE_SUBJECT, SUBJECT, APP_CODE, RELATIVE_PATH, INTERNAL_ID, TICKETNO, WODATAID, ISCANCEL, ACTIVE_ORGAN_NAMES, BUSINESS_STATUS, FORM_ID, RNL, RN
+<==        Row: 8a69a98b67698c32016773aae0b40028, O0000000000000025667, MS_SSA_Management, 20181203 14:13:57, 8a69a98b67698c32016773aae0af0026, 8a5ba3146518372e0165184724d90006, ConfirmSSA, Confirm SSA, null, null, 8a5ba313676ec4ab016773aa9189002b, 8a5ba31364bcaefe0164bcfdf7070039, SSA, SSA, 20181203 14:13:37, O0000000000000025789, ALEX, Handle SSA, Alex, null, SDM, 1, null, null, null, testbyAlex-001, null, jsp/cform/tasklist/formforward.jsp?taskType=1&assignmentId=8a69a98b67698c32016773aae0b40028&internalId=8a69a98b67698c32016773aae0b40028&procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039&actDefUniqueId=8a5ba3146518372e0165184724d90006&actDefId=ConfirmSSA, 8a69a98b67698c32016773aae0b40028, MTN-SSA-20181203-00001, 8a5ba313676ec4ab016773aa9183002a, 2, MS_SSA_Management, null, CF_SSA_Confirm, 1, 1
+<==        Row: 8a69a98b67698c32016769a9059e0018, O0000000000000025667, MS_SSA_Management, 20181201 15:35:43, 8a69a98b67698c32016769a9059a0016, 8a5ba3146518372e0165184724d90006, ConfirmSSA, Confirm SSA, null, null, 8a5ba3136753caaf0167596f6a2f003c, 8a5ba31364bcaefe0164bcfdf7070039, SSA, SSA, 20181128 11:58:53, O0000000000000025789, ALEX, Handle SSA, Alex, null, SDM, 1, null, null, null, test app4, null, jsp/cform/tasklist/formforward.jsp?taskType=1&assignmentId=8a69a98b67698c32016769a9059e0018&internalId=8a69a98b67698c32016769a9059e0018&procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039&actDefUniqueId=8a5ba3146518372e0165184724d90006&actDefId=ConfirmSSA, 8a69a98b67698c32016769a9059e0018, MTN-SSA-20181128-00004, 8a5ba3136753caaf0167596f6a27003b, 2, MS_SSA_Management, null, CF_SSA_Confirm, 2, 2
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6410bddd]
+<==    Columns: COUNT
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7ce448d3]
+[2018-12-03 14:14:00] [http-bio-14001-exec-5] [INFO] [] [End getAPPToDoOrderListTotalCount : 2]
+[2018-12-03 14:14:00] [http-bio-14001-exec-5] [INFO] [] [End getAPPToDoOrderListTotalCount]
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@58fa2e4] will not be managed by Spring
+==>  Preparing: select COUNT(1) AS COUNT from WF_DAI_BAN_TASK t where t.organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? ) and t.proc_def_id = ? 
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), SSA(String)
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [Start getAPPTodoOrderList]
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [Start getAPPTodoOrderList...]
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [End getAPPTodoOrderList...]
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [Start getAPPToDoOrderListTotalCount...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db28fda] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@3431fb76] will not be managed by Spring
+==>  Preparing: SELECT * FROM (SELECT TARGET.*, ROWNUM RN from (SELECT t.*, f.form_id, row_number() over(partition BY t.proc_def_unique_id ORDER BY t.proc_def_unique_id, t.proc_create_time DESC) rnl FROM (select * from WF_DAI_BAN_TASK where organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? )) t, CF_ACT_FORM f where t.act_def_unique_id = f.act_def_unique_id order by t.PROC_CREATE_TIME desc) TARGET WHERE ROWNUM <= ?) WHERE RN >? 
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65b42f1] was not registered for synchronization because synchronization is not active
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), 10(String), 0(String)
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@436b9f86] will not be managed by Spring
+==>  Preparing: select COUNT(1) AS COUNT from WF_DAI_BAN_TASK t where t.organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? ) and t.proc_def_id = ? 
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), SSA(String)
+<==    Columns: COUNT
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ae89947]
+[2018-12-03 14:14:00] [http-bio-14001-exec-27] [INFO] [] [End getAPPToDoOrderListTotalCount : 2]
+[2018-12-03 14:14:00] [http-bio-14001-exec-27] [INFO] [] [End getAPPToDoOrderListTotalCount]
+<==    Columns: COUNT
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@65b42f1]
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [End getAPPToDoOrderListTotalCount : 2]
+[2018-12-03 14:14:00] [http-bio-14001-exec-4] [INFO] [] [End getAPPTodoOrderList]
+<==    Columns: ID, ORGAN_ID, ORGAN_NAME, CREATE_TIME, ACTIVITY_ID, ACT_DEF_UNIQUE_ID, ACT_DEF_ID, ACT_DEF_NAME, ACT_LIMIT_TIME, ACT_WARN_TIME, PROCESS_ID, PROC_DEF_UNIQUE_ID, PROC_DEF_ID, PROC_DEF_NAME, PROC_CREATE_TIME, PROC_CREATOR_ID, PROC_CREATOR_NAME, PRE_ACT_DEF_NAMES, PRE_ORGAN_NAMES, PRIMARY_KEY, PROCESS_TYPE, IS_VISIBLE, SYS_SUBJECT, PROC_SUBJECT, TYPE_SUBJECT, SUBJECT, APP_CODE, RELATIVE_PATH, INTERNAL_ID, TICKETNO, WODATAID, ISCANCEL, ACTIVE_ORGAN_NAMES, BUSINESS_STATUS, FORM_ID, RNL, RN
+<==        Row: 8a69a98b67698c32016773aae0b40028, O0000000000000025667, MS_SSA_Management, 20181203 14:13:57, 8a69a98b67698c32016773aae0af0026, 8a5ba3146518372e0165184724d90006, ConfirmSSA, Confirm SSA, null, null, 8a5ba313676ec4ab016773aa9189002b, 8a5ba31364bcaefe0164bcfdf7070039, SSA, SSA, 20181203 14:13:37, O0000000000000025789, ALEX, Handle SSA, Alex, null, SDM, 1, null, null, null, testbyAlex-001, null, jsp/cform/tasklist/formforward.jsp?taskType=1&assignmentId=8a69a98b67698c32016773aae0b40028&internalId=8a69a98b67698c32016773aae0b40028&procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039&actDefUniqueId=8a5ba3146518372e0165184724d90006&actDefId=ConfirmSSA, 8a69a98b67698c32016773aae0b40028, MTN-SSA-20181203-00001, 8a5ba313676ec4ab016773aa9183002a, 2, MS_SSA_Management, null, CF_SSA_Confirm, 1, 1
+<==        Row: 8a69a98b67698c32016769a9059e0018, O0000000000000025667, MS_SSA_Management, 20181201 15:35:43, 8a69a98b67698c32016769a9059a0016, 8a5ba3146518372e0165184724d90006, ConfirmSSA, Confirm SSA, null, null, 8a5ba3136753caaf0167596f6a2f003c, 8a5ba31364bcaefe0164bcfdf7070039, SSA, SSA, 20181128 11:58:53, O0000000000000025789, ALEX, Handle SSA, Alex, null, SDM, 1, null, null, null, test app4, null, jsp/cform/tasklist/formforward.jsp?taskType=1&assignmentId=8a69a98b67698c32016769a9059e0018&internalId=8a69a98b67698c32016769a9059e0018&procDefUniqueId=8a5ba31364bcaefe0164bcfdf7070039&actDefUniqueId=8a5ba3146518372e0165184724d90006&actDefId=ConfirmSSA, 8a69a98b67698c32016769a9059e0018, MTN-SSA-20181128-00004, 8a5ba3136753caaf0167596f6a27003b, 2, MS_SSA_Management, null, CF_SSA_Confirm, 2, 2
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@db28fda]
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [End getAPPTodoOrderList...]
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [Start getAPPToDoOrderListTotalCount...]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ec2441] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mchange.v2.c3p0.impl.NewProxyConnection@9bb4ff2] will not be managed by Spring
+==>  Preparing: select COUNT(1) AS COUNT from WF_DAI_BAN_TASK t where t.organ_id in ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ? ) and act_def_id in ( select t.act_def_id from WF_MOBILE_ACT_CONFIG t where t.proc_def_id = ? ) and t.proc_def_id = ? 
+==> Parameters: O0000000000000009934(String), O0000000000000009701(String), 2(String), O0000000000000009857(String), O0000000000000009776(String), O0000000000000025667(String), O0000000000000009802(String), O0000000000000025789(String), O0000000000000009790(String), O0000000000000009811(String), O0000000000000009815(String), O0000000000000009829(String), SSA(String), SSA(String)
+<==    Columns: COUNT
+<==        Row: 2
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8ec2441]
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [End getAPPToDoOrderListTotalCount : 2]
+[2018-12-03 14:14:00] [http-bio-14001-exec-28] [INFO] [] [End getAPPTodoOrderList]
